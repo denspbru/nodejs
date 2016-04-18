@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<body>
+	<h3><%= title %></h3>
+	<%= new Date(); %>
+
+	<b>Items:</b>
+	<% for (var i = 0; i < items.length; i++) { %>
+		<li id="<%= items[i].id %>"><%= items[i].name %></li>
+	<% } %>
+	<form action="/add" method="POST">
+		<input name="name" type="text "></input>
+		<input type="submit">Send form</input>
+	</form>
+</body>
+</html>	
